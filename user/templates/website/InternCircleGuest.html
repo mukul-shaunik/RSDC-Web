@@ -1,0 +1,109 @@
+{%	extends	"website/base.html"	%}
+{% load staticfiles %}
+{% block title %}Intern Circle{% endblock title %}
+		{% block content %}
+		<div id="data">
+		<h1>Welcome,Guest</h1>
+		<h2>What would I do?</h2>
+		<h3>As a member of the Interns' Circle, you would assist with a range of tasks including:</h3>
+		<ul>
+		<li>Attending and staffing conferences and events</li>
+		<li>Research</li>
+		<li>Communication and promotion</li>
+		<li>Sitting on committees</li>
+		<li>Other initiatives</li>
+		</ul>		
+		<p>There are many benefits of volunteering with the Centre.  Some of the benefits our Interns enjoy include: increased industry exposure; access to special events; networking opportunities; and consideration for job and research positions. Joining the Interns' Circle is also a great way to enhance your resume and broaden your legal knowledge.</p>
+		<h2>How do I sign-up?</h2>
+		<p>If you are interested in joining the Intern's Circle or in learning more about the Centre's work, please register yourself on this site.</p>
+		</div>
+	</body>
+	<style type="text/css">
+#data li{
+font-size:18px;
+}	
+#data{
+background-image:url("images/inter_back.jpg");
+background-repeat:no-repeat;
+background-position:center;
+}
+#data p{
+font-size:20px;
+}	
+#data h1{
+color:#2e7e99;
+}	
+.H{
+display:inline;
+border-left:2px solid;
+border-left-color:white;
+padding-left:1em;
+padding-right:1em;
+}
+.HF{
+display:inline;
+border-left:none;
+padding-left:0;
+padding-right:1em;
+}
+#T{
+text-align:center;
+font-family:Palatino, serif;
+font-size:40px;
+color:white;
+min-width:1330px;
+background-position:center;
+background-repeat:no-repeat;
+background-image:url("{% static "user/images/ICP.jpg" %}");
+}
+#M{
+text-align:center;
+font-family:Andale Mono, monospace;
+min-height:30px;
+background-color:#0bbaf4;
+font-size:20px;
+text-decoration:none;
+overflow:auto auto;
+min-width:1330px;
+}
+#M li{
+display:inline;
+}
+.Menu
+{
+color:white;
+text-decoration:none;
+}
+.Menu:hover{
+color:#0d7192;
+}
+#M ul li:hover > ul {
+  visibility: visible;
+  
+}
+#M ul li:hover {
+  position: relative;
+  z-index: 599;
+  cursor: default;
+}
+#M ul ul {
+text-align:left;
+font-size:15px;
+width:185px;
+line-height:30px;
+border-color:black;
+	margin-left:485px;
+ visibility: hidden;
+  position: absolute;
+  z-index: 598;
+  background: #3b5757;
+}
+#M ul ul a {
+text-decoration:none;
+ color:White; 
+}
+#M ul ul a:hover {
+font-size:16px;
+}
+</style>
+{% endblock %}

@@ -1,0 +1,28 @@
+<html>
+	<body>
+		{% load staticfiles %}
+		<div id="T"><br>
+		{% block title %}{% endblock %}
+		<br>
+		<div id="M">
+		<ul>
+		<li class="HF"><a href="http://127.0.0.1:8000"  class="Menu">Home</a></li>
+		<li class="H"><a href="http://127.0.0.1:8000/About/"  class="Menu">About RSDC</a></li>
+		<li class="H"><a href="" class="Menu">Grants</a>
+		<ul>
+		<li class="H"><a href="http://127.0.0.1:8000/ResearchGrants/" class="sub"  >Research Grants</a></li>
+		<li class="H"><a href="http://127.0.0.1:8000/TravelGrants/" class="sub"  >Travel Grants</a></li>
+		<li class="H"><a href="http://127.0.0.1:8000/ConferenceGrants/" class="sub"  >Conference Grants</a></li>
+		</ul></li>
+		<li class="H"><a href="http://127.0.0.1:8000/Fellowships/" class="Menu"  >Fellowships</a></li>
+		<li class="H"><a href="http://127.0.0.1:8000/Scholarships/" class="Menu"  >Scholarships</a></li>
+		<li class="H"><a href="http://127.0.0.1:8000/Member/" class="Menu"  >Member</a></li>
+		</ul>
+		</div>
+		</div>
+		{% block content %}{% endblock %}
+		
+		
+		
+
+</html>	

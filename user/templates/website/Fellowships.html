@@ -1,0 +1,109 @@
+{%	extends	"website/base.html"	%}
+{% block title %}Fellowship{% endblock title %}
+		{% block content %}
+		<br>
+	<div id="List">
+	<ul>
+	{% for grant1 in grants %}
+	<li><a href="{%	url	"Fellowship"  title=grant1.title	%}" class="RG">{{grant1.title}}</a></li>
+	{% endfor %}
+<!--	<li><a href="#" class="RG">Azim Premji Foundation Fellowship Program</a></li>
+	<li><a href="#" class="RG">LAMP FELLOWSHIPS</a></li>
+	<li><a href="TFIF.html" target="_blank" class="RG">Teach For India Fellowship</a></li>
+	<li><a href="#" class="RG">William J Clinton Fellowship</a></li>
+	<li><a href="#" class="RG">Young India Fellowship</a></li>
+	--></div>
+	</body>
+<style type="text/css">
+#List{
+line-height:40px;
+min-width:600px;
+overflow:auto auto;
+}
+#List a{
+font-size:18px;
+padding:5px;
+text-decoration:none;
+}
+#List a:hover{
+text-decoration:underline;
+}
+.H{
+display:inline;
+border-left:2px solid;
+border-left-color:white;
+padding-left:1em;
+padding-right:1em;
+}
+.HF{
+display:inline;
+border-left:none;
+padding-left:0;
+padding-right:1em;
+}
+#T{
+text-align:center;
+font-family:Palatino, serif;
+font-size:40px;
+color:white;
+min-width:1330px;
+background-color:#034054;
+}
+#M{
+text-align:center;
+font-family:Andale Mono, monospace;
+min-height:30px;
+background-color:#0bbaf4;
+font-size:20px;
+text-decoration:none;
+overflow:auto auto;
+min-width:1330px;
+}
+#M li{
+display:inline;
+}
+.Menu
+{
+color:white;
+text-decoration:none;
+}
+.Menu:hover{
+color:#0d7192;
+}
+#M ul li:hover > ul {
+  visibility: visible;
+  
+}
+#M ul li:hover {
+  position: relative;
+  z-index: 599;
+  cursor: default;
+}
+#M ul ul {
+text-align:left;
+font-size:15px;
+width:185px;
+line-height:30px;
+border-color:black;
+	margin-left:485px;
+ visibility: hidden;
+  position: absolute;
+  z-index: 598;
+  background: #3b5757;
+}
+#M ul ul a {
+text-decoration:none;
+ color:White; 
+}
+#M ul ul a:hover {
+font-size:16px;
+}
+.RG{
+color:#682a40;
+font-weight:bold;
+}
+.RG:hover{
+text-decoration:underline;
+}
+</style>
+{% endblock %}

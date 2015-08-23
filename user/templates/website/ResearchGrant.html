@@ -1,0 +1,175 @@
+{%	extends	"website/base.html"	%}
+{% block title %}&nbsp;&nbsp;Research Grant&nbsp;::&nbsp;{{grant.title}}{% endblock title %}
+		{% block content %}
+		<p id="First">{{grant.text|linebreaks}}</p>
+	<div id="Content">
+	<h2>Eligibility:<h2>
+	<p>{{grant.eligibility|linebreaks}}</p>
+	<h2>How to Apply:</h2>
+	<p>{{grant.how_to_apply|linebreaks}}</p>
+	<br>
+	<h4>For more info logon to :<a href="{{grant.link}}" >{{grant.link}}</a><h4>
+	</div>
+	<div class ="sidebar">
+<h4>Research Grants</h4>
+	<ul id="w">
+	{% for grant1 in grants %}
+	<li><a href="{%	url	"ResearchGrant"  title=grant1.title	%}" class="RG">{{grant1.title}}</a></li>
+	{% endfor %}
+<!--	<li><a href="#" class="RG">SERB Extra Mural Research Funding (Individual Centric)</a></li>
+	<li><a href="#" class="RG">Nano Mission</a></li>
+	<li><a href="IFS.html" target="_blank" class="RG">INSPIRE Faculty Scheme</a></li>
+	<li><a href="#" class="RG">Women Scientist Scheme</a></li>
+	<li><a href="#" class="RG">Drugs and Pharmaceuticals Research Programme</a></li>
+	<li><a href="#" class="RG">Natural Resources Data Management System</a></li>  -->
+	</div>
+<style type="text/css">
+
+.H{
+display:inline;
+border-left:2px solid;
+border-left-color:white;
+padding-left:1em;
+padding-right:1em;
+}
+.HF{
+display:inline;
+border-left:none;
+padding-left:0;
+padding-right:1em;
+}
+#T{
+text-align:center;
+font-family:Palatino, serif;
+font-size:40px;
+color:white;
+min-width:1330px;
+background-color:#034054;
+}
+#M{
+text-align:center;
+font-family:Andale Mono, monospace;
+min-height:30px;
+background-color:#0bbaf4;
+font-size:20px;
+min-width:1330px;
+text-decoration:none;
+overflow:auto auto;
+}
+#w li{
+display:inline;
+}
+.Menu
+{
+color:white;
+text-decoration:none;
+}
+.Menu:hover{
+color:#0d7192;
+}
+#M ul li:hover > ul {
+  visibility: visible;
+  
+}
+#M ul li:hover {
+  position: relative;
+  z-index: 599;
+  cursor: default;
+}
+#M ul ul {
+text-align:left;
+font-size:15px;
+width:185px;
+line-height:30px;
+border-color:black;
+	margin-left:485px;
+ visibility: hidden;
+  position: absolute;
+  z-index: 598;
+  background: #3b5757;
+}
+#M ul ul a {
+text-decoration:none;
+ color:White; 
+}
+#M ul ul a:hover {
+font-size:16px;
+}
+#content{
+float:left;
+width:80%px;
+}
+#w{
+width:300px;
+}
+h2{
+font-size:30px;
+text-decoration:underline;
+}
+h3{
+font-size:25px;
+}
+h1
+{
+color:#575758;
+font-size:35px;
+min-width:1340px;
+}
+#Box{
+font-family: Arial, Verdana, sans-serif;
+margin:0px 0px 0px 700px;
+font-size:20px;
+text-decoration:none;
+padding:3px;
+border-top:solid;
+border-bottom:solid;
+border-top-color:black;
+border-bottom-color:black;
+width:400px;
+}	
+#First{
+font-size:20px;
+width:1200px;
+}
+.s{
+color:black;
+}
+.s a{
+color:#575758;
+font-size:18px;
+padding:5px;
+text-decoration:none;
+}	
+.s a:hover{
+text-decoration:underline;
+}
+h4{
+font-size:25px;
+text-decoration:underline;
+color:black;
+text-align:center;
+}
+ol{
+font-size:20px;
+width:900px;
+min-width:600px;
+}	
+.sidebar{
+position:absolute;
+float: right;
+margin:0px 0px 0px 1000px;
+background-color:#93d4ea;
+line-height:30px;
+overflow-y:auto;
+min-width:250px;
+height:400px;
+}
+p
+{
+font-size:20px;
+width:900px;
+min-width:600px;
+}
+</style>
+</body>
+{% endblock %}

@@ -1,0 +1,89 @@
+{%	extends	"website/base.html"	%}
+{% load staticfiles %}
+{% block title %}{{grant.title}}{% endblock title %}
+		{% block content %}
+		<div id="cont"><img src="{% static "user/images/" %}{{grant.title}}.jpg"  align="right" style="height:450px; width:600px;"/>
+<p >{{grant.text|linebreaks}} </p>
+<p align="center" style="font-size:25px;">For more information visit:<a href="{{grant.link}}" style="font-size:25px;">{{grant.link}}</a></p>
+</body>
+</html>
+<style type="text/css">
+.H{
+display:inline;
+border-left:2px solid;
+border-left-color:white;
+padding-left:1em;
+padding-right:1em;
+}
+.HF{
+display:inline;
+border-left:none;
+padding-left:0;
+padding-right:1em;
+}
+#T{
+text-align:center;
+font-family:Palatino, serif;
+font-size:40px;
+color:white;
+min-width:1330px;
+background-color:#034054;
+}
+#M{
+text-align:center;
+font-family:Andale Mono, monospace;
+min-height:30px;
+background-color:#0bbaf4;
+font-size:20px;
+text-decoration:none;
+overflow:auto auto;
+min-width:1330px;
+}
+
+.Menu
+{
+color:white;
+text-decoration:none;
+}
+.Menu:hover{
+color:#0d7192;
+}
+#M ul li:hover > ul {
+  visibility: visible;
+  
+}
+#M ul li:hover {
+  position: relative;
+  z-index: 599;
+  cursor: default;
+}
+#M ul ul {
+text-align:left;
+font-size:15px;
+width:185px;
+line-height:30px;
+border-color:black;
+	margin-left:485px;
+ visibility: hidden;
+  position: absolute;
+  z-index: 598;
+  background: #3b5757;
+}
+#M ul ul a {
+text-decoration:none;
+ color:White; 
+}
+#M ul ul a:hover {
+font-size:16px;
+}
+#cont li
+{
+  font-size:18px;
+}
+#cont p{
+font-size:20px;
+}
+
+</style>
+		
+{% endblock %}
